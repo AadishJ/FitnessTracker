@@ -7,7 +7,7 @@ function Home1 ()
             <div className="flex items-center justify-center mt-36 mb-20 text-7xl text-gray-600">
                 Your Fitness, Simplified
             </div>
-            <Link to="/singup" className="bg-green-300 p-3 text-white rounded-md">Get Started Now</Link>
+            <Link to="/signup" className="bg-green-300 p-3 text-white rounded-md">Get Started Now</Link>
         </div>
     );
 }
