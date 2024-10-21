@@ -1,0 +1,9 @@
+{
+    "abs": ["Plank", "Leg Raises"],
+    "back": ["Pull-ups", "Deadlift", "Rows"],
+    "biceps": ["Bicep Curls", "Hammer Curls", "Concentration Curls"],
+    "chest": ["Bench Press", "Push-ups", "Chest Fly"],
+    "legs": ["Squats", "Lunges", "Leg Press"],
+    "shoulder": ["Shoulder Press", "Lateral Raise", "Front Raise"],
+    "triceps": ["Tricep Dips", "Overhead Tricep Extension", "Tricep Kickbacks"]
+}

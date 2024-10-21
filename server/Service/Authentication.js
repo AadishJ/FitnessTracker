@@ -5,7 +5,7 @@ function setUser ( user )
     return jwt.sign( {
         _id: user._id,
         email: user.email,
-    }, skey, { expiresIn: "1h" } );
+    }, skey, { expiresIn: "24h" } );
 }
 function getUser ( token )
 {

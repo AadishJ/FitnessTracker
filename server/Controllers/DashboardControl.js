@@ -1,6 +1,12 @@
 async function handleDashboardGet ( req, res )
 {
-    return res.status(200);
+    console.log("Asddasdasdasda");
+    if ( !req.cookie.uid )
+    {
+        localStorage.removeItem( "token" );
+        localStorage.removeItem( "userName" );
+        res.redirect( "/" );
+    }
 }
 async function handleDashboardPost ( req, res )
 {

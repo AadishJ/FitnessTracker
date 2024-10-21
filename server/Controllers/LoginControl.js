@@ -19,7 +19,7 @@ async function handleLoginPost(req, res) {
 
         if (isMatch) {
             const token = setUser(reqUser);
-            res.cookie( "uid", token );
+            res.cookie( "uid", token,{ maxAge: 24 * 60 * 60 * 1000 } );
             return res.status(200).json({ message: "Logged In Successfully", jwtToken: token, name: reqUser.name});
         } else {
             return res.status(400).json({ message: "Wrong Password"});
