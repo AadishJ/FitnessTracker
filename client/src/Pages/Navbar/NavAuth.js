@@ -1,66 +1,41 @@
-import { Link, useNavigate } from "react-router-dom";
-import { useAuth } from "../../Context/AuthContext";
-import { GiHamburgerMenu } from "react-icons/gi";
-import { useState } from "react";
-import SideBar from "./SideBar";
-
-function NavAuth ( { loggedInUser } )
-{
-    const { changeAuthenticated } = useAuth();
-    const [isOpen,setIsOpen]  = useState(false);
-    const navigate = useNavigate();
-    const handleLogout = () =>
-    {
-        localStorage.removeItem( "userName" );
-        localStorage.removeItem( "token" );
-        changeAuthenticated( false );
-        setTimeout( () =>
-        {
-            navigate( "/" );
-        }, 1000 );
-    };
-    const toggleSideBar = () =>
-    {
-        setIsOpen( !isOpen );
-    }
-    const renderSideBar = () =>
-    {
-        if ( isOpen )
-        {
-            return <SideBar />;
-        } else
-        {
-            return null;
-        }
-    }
+import { Link } from "react-router-dom";
+import { FaSearch } from "react-icons/fa";
+import { FaDumbbell } from "react-icons/fa";
+function NavNoAuth() {
     return (
-        <div>
-            {renderSideBar}
-            <div className="bg-customBrown p-4 text-customBeige font-roboto">
-                <div className="flex justify-between gap-5 mx-4">
-                    <div className="flex items-center gap-4">
-                    <GiHamburgerMenu onClick={toggleSideBar} className="fill-white"/>
-                    <Link to="/">
-                        <div className="p-2">FitnessTracker</div>
+        <div className="fixed top-0 z-50 w-full bg-backPurple shadow-lg">
+            <div className="text-white flex justify-between items-center mx-8 my-4">
+                <Link to="/">
+                    <div className="flex flex-col items-center">
+                    <div className="flex items-center">F
+                            <FaDumbbell className="fill-white rotate-90" />
+                        TNESS</div>
+                        <div>TRACKER</div>
+                    </div>
+                </Link>
+                <div className="flex gap-4 justify-center items-center">
+                    <div className="flex justify-start items-center relative gap-2">
+                        <FaSearch className="fill-gray-500 absolute left-2 w-4" />
+                        <input
+                            type="text"
+                            placeholder="Search"
+                            className="bg-lightPurple w-96 rounded-lg p-4 pl-10 h-10 text-lg"
+                        />
+                    </div>
+                    <Link to="/login">
+                        <div className="border-brightPurple w-24 h-10 border-2 flex items-center justify-center rounded-full hover:cursor-pointer hover:border-none hover:bg-brightPurple">
+                            Login
+                        </div>
                     </Link>
-                    </div>
-                    <div className="flex gap-4">
-                        <form action="" className="flex gap-2 items-center mr-2 text-white">
-                            <button className="text-customBeige">Search</button>
-                            <input type="text" className="w-36 bg-customBeige h-6 bg-opacity-40 rounded-md" />
-                        </form>
-                        <Link to="/faq">
-                            <button className="p-2">FAQ</button>
-                        </Link>
-                        <Link to="/dashboard">
-                            <button className="p-2">Dashboard</button>
-                        </Link>
-                        <div onClick={ handleLogout } className="rounded-full w-10 h-10 bg-customBeige text-customBrown text-center text-3xl flex items-center justify-center">  { loggedInUser?.charAt( 0 ).toUpperCase() }</div>
-                    </div>
+                    <Link to="/signup">
+                        <div className="bg-brightPurple rounded-full w-24 h-10 flex justify-center items-center hover:cursor-pointer hover:bg-backPurple hover:border-brightPurple hover:border-2">
+                            Signup
+                        </div>
+                    </Link>
                 </div>
             </div>
         </div>
     );
 }
 
-export default NavAuth;
+export default NavNoAuth;

@@ -13,12 +13,12 @@ function Card ( { thing, image } )
         initial={{ y: 300, opacity: 0 }}  
         animate={{ y: 0, opacity: 1 }}    
         transition={{ duration: 0.4 }}    
-        className="w-96 hover:cursor-pointer"         
+        className="w-96 hover:cursor-pointer rounded-lg"         
         />
         </Link>
                 <Link to={ `/${ thing.toLowerCase() }` }>
                 <motion.button
-      className="bg-customBrown w-56 h-14 relative rounded-3xl text-customBeige hover:bg-customBeige hover:text-customBrown border hover:border-customBrown z-10"
+      className="bg-customBrown w-56 h-14 relative rounded-full text-customBeige hover:bg-customBeige hover:text-customBrown border-2 hover:border-customBrown z-10"
       initial={{ opacity: 0, y: 20 }} // Start off invisible and slightly below
       animate={{ opacity: 1, y: 0 }}   // Animate to full visibility and original position
       transition={{ delay: 0.4, duration: 0.25 }} // Delay of 0.5s, duration of 0.25s
