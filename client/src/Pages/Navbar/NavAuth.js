@@ -15,10 +15,10 @@ function NavAuth ()
         setTimeout(() =>  navigate("/"), 1000);
     }
     return (
-        <div className="fixed top-0 z-50 w-full bg-backPurple shadow-lg">
+        <div className="fixed top-0 z-2 w-full bg-backPurple shadow-lg">
             <div className="text-white flex justify-between items-center mx-8 my-4">
                 <Link to="/">
-                    <div className="flex flex-col items-center">
+                    <div className="flex flex-col items-center font-medium">
                     <div className="flex items-center">F
                             <FaDumbbell className="fill-white rotate-90" />
                         TNESS</div>

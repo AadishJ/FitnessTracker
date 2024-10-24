@@ -123,7 +123,6 @@ function LoginDark ()
                             onSuccess={ handleSuccess }
                         onError={ handleFailure }
                         text="signin_with"
-                        
                     />
                     <Link className="text-white font-roboto font-semibold mt-5 hover:underline" to="/signup">Not a Member? Signup Now</Link>
                 </div>

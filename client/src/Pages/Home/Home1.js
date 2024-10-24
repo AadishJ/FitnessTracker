@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-function Home1() {
+function Home1({handleScroll}) {
     const words = ["Better.", "Healthier.", "Simpler.", "Easier."];
     const [currentWordIndex, setCurrentWordIndex] = useState(0);
 
@@ -32,7 +32,7 @@ function Home1() {
             </AnimatePresence>
         );
     }
-
+    
     return (
         <div>
             <div className="text-white mx-40 mt-32 text-7xl">
@@ -40,6 +40,9 @@ function Home1() {
             </div>
             <div className="text-textPurple mx-40 mt-10 text-7xl">
                 {TextAnimation()}
+            </div>
+            <div onClick={handleScroll} className="bg-brightPurple rounded-full mt-40 mx-40 text-white text-2xl font-outfit w-44 h-16 flex justify-center items-center hover:cursor-pointer hover:bg-backPurple hover:border-brightPurple hover:border-2">
+                Learn More
             </div>
         </div>
     );

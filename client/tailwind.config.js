@@ -13,6 +13,7 @@ module.exports = {
         anotherPurple: "#2E005C",
         somePurple: "#5800B0",
         footerPurple: "#26023F",
+        pinkPurple: "#630DB2",
       },
       fontFamily: {
         roboto: ['Roboto', 'sans-serif'],
