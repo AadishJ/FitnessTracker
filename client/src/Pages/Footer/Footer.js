@@ -6,7 +6,7 @@ function Footer ()
 {
     return (
         <div>
-            <div className="w-full h-96 bg-footerPurple text-white flex items-center justify-between">
+            <div className="w-full h-96 mt-10 bg-footerPurple text-white flex items-center justify-between">
                 <LeftFoot />
                 <MiddleFoot />
                 <RightFoot/>

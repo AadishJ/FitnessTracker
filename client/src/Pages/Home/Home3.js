@@ -33,7 +33,7 @@ function Home3 ()
                 alt=""
                 initial={{ opacity: 0, y: 30 }}
                 animate={controls}
-                transition={{ duration: .9 }}
+                transition={{ duration: .9, delay: 0.3 }}
                 className="w-9/12"
             />
                 </div>

@@ -12,8 +12,12 @@ const userModel = new mongoose.Schema( {
     },
     password: {
         type: String,
-        required: true,
-    }
+    },
+    isGoogle: {
+        type: Boolean,
+        require: true,
+        default: false,
+    },
 }, {timestamps: true} );
 
 const user = mongoose.model( "User", userModel );
